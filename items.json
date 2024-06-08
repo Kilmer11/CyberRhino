@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "id" : 1,
+           "image" : "https://files.fm/u/zpepwe99hk",
+           "title" : "Hardware",
+           "decription" : "Aqui você irá conferir opções para o seu eprendedorismo alavancar e seguir as atuais tendêcias do mercado da área de técnologia, estamos contigo para proporcionar o melhor serviço na área de hardware que você precisar: - Manutenção - Formatação"
+        },
+        {
+            "id" : 2,
+           "image" : "https://files.fm/u/c6n7k5bnup",
+           "title" : "Design",
+           "decription" : "Aqui você irá conferir opções para o seu eprendedorismo alavancar e seguir as atuais tendêcias do mercado da área de técnologia, estamos contigo para proporcionar o melhor serviço na área de hardware que você precisar: - Manutenção - Formatação"
+        },
+        {
+            "id" : 3,
+           "image" : "https://files.fm/u/2fsvkxq8pd",
+           "title" : "Software",
+           "decription" : "Aqui você irá conferir opções para o seu eprendedorismo alavancar e seguir as atuais tendêcias do mercado da área de técnologia, estamos contigo para proporcionar o melhor serviço na área de hardware que você precisar: - Manutenção - Formatação"
+        }
+    ]
+}

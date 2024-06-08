@@ -1,0 +1,32 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #0960C1;
+  --linear-gradient: linear-gradient(45deg, #1523EC, #15BFE3);
+  --linear-gradient-y: linear-gradient(0deg, #1522EC, #15BFE3);
+  --linear-gradient-y-invert: linear-gradient(0deg, #15BFE3, #1522EC);
+  --bg-color: #F8FAFB;
+  --border-color: #C4C4C4;
+  --quem-somos-bg: #E7F8FC;
+  --text-gray: #606060;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
