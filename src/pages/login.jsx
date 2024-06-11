@@ -5,13 +5,36 @@ import { LogoLogin } from '../components/icons/logo-login';
 
 const Container = styled.div`
     display: flex;
+    height: 100vh;
+
+    @media(max-width: 778px) {
+        background: var(--linear-gradient);
+        padding: 50px 40px;
+    }
 `
 
 const ImageContainer = styled.div`
-    position: relative;
-    padding-inline: 25px;
-    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
     background: var(--linear-gradient-y-invert);
+
+    img {
+        max-width: 700px;
+        width: 100%;
+        height: 90%;
+
+        @media(max-width: 850px) {
+            width: 80%;
+            height: 70%;
+        }
+    }
+
+    @media (max-width: 778px) {
+        display: none;
+    }
 `
 
 const FormContainer = styled.div`
@@ -19,7 +42,8 @@ const FormContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px 150px 100px 150px;
+    padding: 50px 0 100px 0;
+    background: #FFF;
 
     svg {
         margin-bottom: 50px
@@ -46,22 +70,37 @@ const FormContainer = styled.div`
             color: var(--primary-color);
         }
     }
+
+    @media(max-width: 778px) {
+        border-radius: 18px;    
+
+        p {
+            font-size: 18px;
+        }
+
+        button {
+            padding: 16px 30px;
+            font-size: 24px;
+        }
+    }
 `
 
 const Form = styled.div`
+    width: 70%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 65px;
-    width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 78px;
 
     div {
+        width: 100%;
         display: flex;
-        justify-content: space-between;
         gap: 35px;
     }
 
     input {
+        width: 100%;
         border: none;
         height: 44px;
         border-bottom: 1px solid var(--primary-color);
@@ -75,6 +114,21 @@ const Form = styled.div`
         position: absolute;
         top: 0px;
         left: 0px;
+    }
+
+    @media(max-width: 778px) {
+        div:nth-of-type(2) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        width: 80%;
+        gap: 50px;
+        margin-bottom: 40px;
     }
 `
 

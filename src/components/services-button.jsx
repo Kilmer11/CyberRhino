@@ -5,20 +5,35 @@ const ServicesButtonContainer = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
     padding: 15px 24px;
     background: var(--linear-gradient);
     text-transform: uppercase;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
     font-weight: 700;
     color: #FFF;
-    width: 310px;
+    width: 100%;
     cursor: pointer;
+    gap: 20px;
 
-    .img {
+    p {
+        font-size: 18px;
+    }
+
+    .basket {
         margin: 0;
+    }
+
+    @media(max-width: 1440px) {
+        p {
+            font-size: 14px;
+        }
+
+        gap: 10px;
+
+        .basket {
+            width: 35px;
+        }
     }
 `
 
@@ -26,7 +41,7 @@ export function ServicesButton() {
     return (
         <ServicesButtonContainer>
             <p>solicitar serviço</p> 
-            <img className="img" src={Basket}/>
+            <img className="basket" src={Basket}/>
         </ServicesButtonContainer>
     )
 }

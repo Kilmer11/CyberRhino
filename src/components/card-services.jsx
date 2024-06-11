@@ -10,9 +10,35 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   justify-content: center;
    gap: 50px;
-   margin-inline: 85px; 
+
+   @media(max-width: 778px) {
+    flex-direction: column;
+   }
+
+   @media(max-width: 1440px) {
+    gap: 25px;
+    
+    p {
+      font-size: 16px;
+    }
+   }
+
+   @media(max-width: 1000px) {
+    max-width: 350px;
+    
+    div {
+      .img {
+          width: 200px;
+        }
+
+        p {
+          font-size: 14px;
+           width: 100%;
+        }
+    }
+  }
 `
 
 const CardContainer = styled.div`
@@ -37,13 +63,21 @@ const CardContainer = styled.div`
     text-decoration: none;
     width: 90%;
   }
+
+  @media(max-width: 1440px) {
+    padding: 20px 20px 40px 20px;
+
+    .img {
+      width: 260px;
+    }
+  }
 `
 
 const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 16px;
 `
 
@@ -61,7 +95,7 @@ const Card = () => {
   return (
     <Container>
         <CardContainer>
-          <img src={Hardware}/>
+          <img className="img" src={Hardware}/>
           <Title>
             <h2>Hardware</h2>
             <ConfereIcon/>
@@ -70,15 +104,15 @@ const Card = () => {
             Aqui você irá conferir opções para o seu eprendedorismo alavancar e seguir as atuais
             tendêcias do mercado da área de técnologia, estamos contigo para proporcionar o melhor 
             serviço na área de hardware que você precisar: - Manutenção - Formatação
-            </Description>
-            <Link to="/services/hardware" className='link'>
-              <ServicesButton/>
-            </Link>
+          </Description>
+          <Link to="/services/hardware" className='link'>
+            <ServicesButton/>
+          </Link>
         </CardContainer>
 
 
         <CardContainer>
-          <img className='design' src={Design}/>
+          <img className='design img' src={Design}/>
           <Title>
             <h2>Design</h2>
             <ConfereIcon/>
@@ -87,15 +121,15 @@ const Card = () => {
             Aqui você irá conferir opções para o seu eprendedorismo alavancar e seguir as atuais
             tendêcias do mercado da área de técnologia, estamos contigo para proporcionar o melhor 
             serviço na área de hardware que você precisar: - Manutenção - Formatação
-            </Description>
-            <Link to="/services/design" className='link'>
-              <ServicesButton/>
-            </Link>
+          </Description>
+          <Link to="/services/design" className='link'>
+            <ServicesButton/>
+          </Link>
         </CardContainer>
 
 
         <CardContainer>
-          <img src={Software}/>
+          <img className="img" src={Software}/>
           <Title>
             <h2>Software</h2>
             <ConfereIcon/>
@@ -104,10 +138,10 @@ const Card = () => {
             Aqui você irá conferir opções para o seu eprendedorismo alavancar e seguir as atuais
             tendêcias do mercado da área de técnologia, estamos contigo para proporcionar o melhor 
             serviço na área de hardware que você precisar: - Manutenção - Formatação
-            </Description>
-            <Link to="/services/software" className='link'>
-              <ServicesButton/>
-            </Link>
+          </Description>
+          <Link to="/services/software" className='link'>
+            <ServicesButton/>
+          </Link>
         </CardContainer>
     </Container>
   )

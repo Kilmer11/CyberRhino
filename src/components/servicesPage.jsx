@@ -32,10 +32,34 @@ const Text = styled.div`
 
   .description {
     margin-top: 40px;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 1.2;
     text-align: center;
+  }
+
+  @media(max-width: 1320px) {
+    padding: 40px 180px 120px 180px;
+
+    .description {
+      font-size: 26px;
+    }
+  }
+
+  @media(max-width: 940px) {
+    padding: 60px 80px 80px 80px;
+
+    .description {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .ask {
+      font-size: 15px;
+    }
   }
 `
 
@@ -44,8 +68,16 @@ const ServicesCard = styled.div`
   justify-content: center;
   align-items: center;
   gap: 100px;
-  padding: 0 150px;
   margin-bottom: 200px;
+
+  @media(max-width: 1320px) {
+    gap: 30px;
+  }
+
+  @media(max-width: 940px) {
+    flex-direction: column;
+    gap: 100px;
+  }
 `
 
 const Card = styled.div`
@@ -53,6 +85,18 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 1320px) {
+    .img {
+      width: 400px;
+    }
+  }
+
+  @media(max-width: 940px) {
+    .img {
+      width: 320px;
+    }
+  }
 `
 
 const TitleService = styled.div`
@@ -64,6 +108,7 @@ const TitleService = styled.div`
   background: var(--linear-gradient-y);
   border-radius: 8px;
   gap: 10px;
+  text-align: center;
 
   h1 {
     color: #FFF;
@@ -78,6 +123,32 @@ const TitleService = styled.div`
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
+  }
+  
+  @media(max-width: 1320px) {
+    padding-block: 30px;
+    width: 460px;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media(max-width: 500px) {
+    padding: 20px 0;
+    width: 400px;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
 `
 
@@ -118,6 +189,23 @@ const ContainerCard = styled.div`
       margin-block: 40px;
     }
   }
+
+  @media(max-width: 1320px) {
+    width: 320px;
+    padding: 25px;
+
+    .description2 {
+      font-size: 22px;
+    }
+  }
+
+  @media(max-width: 500px) {
+    width: 280px;
+
+    .description2 {
+      font-size: 20px;
+    }
+  }
 `
 
 const ServicesPage = ({
@@ -139,12 +227,12 @@ const ServicesPage = ({
       <NavBarServices/>
       <Text>
         <h1>{title}</h1>
-        <Pbold>{askOption}</Pbold>
+        <Pbold className='ask'>{askOption}</Pbold>
         <p className='description'>{description}</p>
       </Text>
       <ServicesCard>
         <Card>
-          <img src={image1 === "manutenção" && Manutenção
+          <img className='img' src={image1 === "manutenção" && Manutenção
                 ||  image1 === "frontend" && FrontEnd
                 ||  image1 === "webdesign" && WebDesign
           }/>
@@ -164,7 +252,7 @@ const ServicesPage = ({
 
 
         <Card>
-          <img src={image2 === "formatação" && Formatação
+          <img className='img' src={image2 === "formatação" && Formatação
                 ||  image2 === "backend" && BackEnd
                 ||  image2 === "marketing" && Marketing
           }/>

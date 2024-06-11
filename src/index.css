@@ -16,6 +16,7 @@
   --border-color: #C4C4C4;
   --quem-somos-bg: #E7F8FC;
   --text-gray: #606060;
+  --breakpoint: 778px;
 }
 
 body {

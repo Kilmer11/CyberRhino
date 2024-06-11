@@ -12,6 +12,17 @@ const Container = styled.div`
     img {
         width: 100%;
     }
+
+    @media(max-width: 778px) {
+        .Images {
+            display: none;
+        }
+
+        .ask {
+            width: 60%;
+            margin: 0;
+        }
+    }
 `
 
 const ContentContainer = styled.div`
@@ -23,6 +34,31 @@ const ContentContainer = styled.div`
     img {
         width: 345px;
         margin-bottom: 70px;
+    }
+
+    @media(max-width: 778px) {
+        flex-direction: column-reverse;
+        padding: 100px 0 40px 0;
+    }
+
+    @media(max-width: 1200px) {
+        padding-inline: 50px;
+    }
+
+    @media(max-width: 1200px) {
+        img {
+            width: 300px;
+        }
+
+        div {
+            h1 {
+                font-size: 34px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
     }
 `
 
@@ -44,14 +80,32 @@ const Content = styled.div`
         font-weight: 500;
         line-height: 1;
     }
+
+    @media(max-width: 778px) {
+        text-align: center;
+        width: 90%;
+
+        p {
+            font-size: 16px;
+        }
+
+        h1 {
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
 `
 
 const QuemSomos = () => {
   return (
     <Container>
-        <img src={Images}/>
+        <img className='Images' src={Images}/>
         <ContentContainer>
-            <img src={AskImage}/>
+            <img className="ask" src={AskImage}/>
             <Content>
                 <P>Quem somos?</P>
                 <H1>Entenda porque existimos</H1>

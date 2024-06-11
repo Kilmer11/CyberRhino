@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Card from './card-services';
 import { P } from "./topography/P";
 import { H1 } from './topography/H1';
-// import { useQuery } from 'react-query';
-// import axios from 'axios';
 
 const Container = styled.div`
     display: flex;
@@ -12,26 +10,28 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 85px;
-    margin-bottom: 245px;
+    margin-bottom: 150px;
+    text-align: center;
 
     h1 {
         margin-bottom: 45px;
+        line-height: 1.2;
     }
+
+    @media(max-width: 778px) {
+      margin-bottom: 100px;
+
+      p {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    } 
 `
 
 const Services = () => {
-    // const api = 'http://localhost:8080/items';
-
-    // const { data, error } = useQuery("items", () => {
-    //   return axios.get(api).then((response) => response.data);
-    // })
-
-
-    // console.log(data);
-    // if(error) {
-    //     console.log(error)
-    // }
-
   return (
     <Container>
         <P>Serviços</P>

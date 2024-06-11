@@ -19,11 +19,21 @@ const Container = styled.div`
             color: #FFF;
         }
     }
+
+    @media(max-width: 778px) {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+    }
 `
 
 const Social = styled.div`
     display: flex;
     gap: 70px;
+
+    @media(max-width: 778px) {
+        gap: 50px
+    }
 `
 
 const Footer = () => {

@@ -8,8 +8,94 @@ import { P } from "./topography/P";
 
 const Container = styled.div`
     display: flex;
-    justify-content: space-between;
-    padding: 250px 145px 200px 145px;
+    justify-content: center;
+    gap: 180px;
+    padding: 150px 50px;
+
+    .button2 {
+        display: none;
+    }
+
+    @media(max-width: 778px) {
+        flex-direction: column;
+        padding: 100px 40px;
+        align-items: center;
+        gap: 34px;
+
+        .button1 {
+            display: none;
+        }
+        
+        .button2 {
+            font-size: 20px;
+            padding: 16px 40px;
+            display: flex;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
+            
+        div {
+            align-items: center;
+            text-align: center;
+
+            h1 {
+                font-size: 34px;
+                margin-bottom: 30px;
+            }
+
+            .local {
+                margin: 0;
+            }
+
+            div {
+                svg {
+                    width: 30px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 1220px) {
+        gap: 50px;
+
+        img {
+            width: 400px;
+            height: 282px;
+        }
+
+        div {
+            .local {
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                font-size: 36px;
+            }
+
+            button {
+                margin-top: 30px;
+                font-size: 24px
+            }
+
+            div {
+                svg {
+                    width: 44px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 `
 
 const Content = styled.div`
@@ -24,6 +110,7 @@ const Content = styled.div`
         font-size: 48px;
         font-weight: 700;
         margin-bottom: 40px;
+        line-height: 1;
     }
     
     h3 {
@@ -43,20 +130,20 @@ const Content = styled.div`
     .local {
         margin-bottom: 20px;
     }
+`
 
-    button {
-        margin-top: 65px;
-        background: var(--primary-color);
-        display: flex;
-        align-items: center;
-        gap: 35px;
-        padding: 26px 55px;
-        color: #FFF;
-        font-size: 30px;
-        font-weight: 400;
-        border: none;
-        border-radius: 70px;
-    }
+const Button = styled.button`
+    margin-top: 65px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 26px 55px;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 400;
+    border: none;
+    border-radius: 70px;
 `
 
 const Contato = () => {
@@ -73,9 +160,10 @@ const Contato = () => {
                 <EmailIcon/>
                 <h3>cyberrhino@gmail.com</h3>
             </div>
-            <button>Contate-nos <Whatsapp/></button>
+            <Button className="button1">Contate-nos <Whatsapp/></Button>
         </Content>
         <img src={ContatoImage}/>
+        <Button className="button2">Contate-nos <Whatsapp/></Button>
     </Container>
   )
 }
